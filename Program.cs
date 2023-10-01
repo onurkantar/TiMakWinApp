@@ -12,7 +12,7 @@ namespace TiMakWinApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
-            Application.Run(new Form1());
+            Application.Run(new SelectDesign());
         }
     }
 }
