@@ -9,7 +9,9 @@ namespace TiMakWinApp
         private Rectangle originalFormSize;
         private Rectangle textBoxOriginalRectangle;
         private Rectangle listBoxOriginalRectangle;
-        private Rectangle buttonOriginalRectangle;
+        private Rectangle reSelectDesignsButtonOriginalRectangle;
+        private Rectangle printButtonOriginalRectangle;
+        private Rectangle sharpGLOriginalRectangle;
 
         public TiMakV1(string[] FileNames, string[] SafeFileNames)
         {
@@ -25,7 +27,9 @@ namespace TiMakWinApp
             originalFormSize = new Rectangle(Location.X, Location.Y, Size.Width, Size.Height);
             textBoxOriginalRectangle = new Rectangle(textBox1.Location.X, textBox1.Location.Y, textBox1.Width, textBox1.Height);
             listBoxOriginalRectangle = new Rectangle(listBox1.Location.X, listBox1.Location.Y, listBox1.Width, listBox1.Height);
-            buttonOriginalRectangle = new Rectangle(button1.Location.X, button1.Location.Y, button1.Width, button1.Height);
+            reSelectDesignsButtonOriginalRectangle = new Rectangle(button1.Location.X, button1.Location.Y, button1.Width, button1.Height);
+            printButtonOriginalRectangle = new Rectangle(button2.Location.X, button2.Location.Y, button2.Width, button2.Height);
+            sharpGLOriginalRectangle = new Rectangle(openglControl1.Location.X, openglControl1.Location.Y, openglControl1.Width, openglControl1.Height);
 
             foreach (var SafeFileName in SafeFileNames)
             {
@@ -52,7 +56,9 @@ namespace TiMakWinApp
         {
             resizeControl(textBoxOriginalRectangle, textBox1);
             resizeControl(listBoxOriginalRectangle, listBox1);
-            resizeControl(buttonOriginalRectangle, button1);
+            resizeControl(reSelectDesignsButtonOriginalRectangle, button1);
+            resizeControl(printButtonOriginalRectangle, button2);
+            resizeControl(sharpGLOriginalRectangle, openglControl1);
         }
     }
 }
