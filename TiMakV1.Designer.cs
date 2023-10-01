@@ -31,8 +31,8 @@
             textBox1 = new TextBox();
             listBox1 = new ListBox();
             button1 = new Button();
-            openglControl1 = new SharpGL.OpenGLControl();
             button2 = new Button();
+            openglControl1 = new SharpGL.OpenGLControl();
             ((System.ComponentModel.ISupportInitialize)openglControl1).BeginInit();
             SuspendLayout();
             // 
@@ -71,18 +71,6 @@
             button1.Text = "Tasarımları Yeniden Seç";
             button1.UseVisualStyleBackColor = false;
             // 
-            // openglControl1
-            // 
-            openglControl1.DrawFPS = false;
-            openglControl1.Location = new Point(143, 12);
-            openglControl1.Margin = new Padding(4, 3, 4, 3);
-            openglControl1.Name = "openglControl1";
-            openglControl1.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
-            openglControl1.RenderContextType = SharpGL.RenderContextType.DIBSection;
-            openglControl1.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
-            openglControl1.Size = new Size(648, 427);
-            openglControl1.TabIndex = 3;
-            // 
             // button2
             // 
             button2.ForeColor = Color.FromArgb(237, 237, 237);
@@ -93,14 +81,28 @@
             button2.Text = "Yazdır";
             button2.UseVisualStyleBackColor = false;
             // 
+            // openglControl1
+            // 
+            openglControl1.DrawFPS = false;
+            openglControl1.Location = new Point(143, 12);
+            openglControl1.Margin = new Padding(4, 3, 4, 3);
+            openglControl1.Name = "openglControl1";
+            openglControl1.OpenGLVersion = SharpGL.Version.OpenGLVersion.OpenGL2_1;
+            openglControl1.RenderContextType = SharpGL.RenderContextType.DIBSection;
+            openglControl1.RenderTrigger = SharpGL.RenderTrigger.TimerBased;
+            openglControl1.Size = new Size(648, 427);
+            openglControl1.TabIndex = 5;
+            openglControl1.OpenGLDraw += openglControl1_OpenGLDraw;
+            openglControl1.KeyDown += openglControl1_KeyDown;
+            // 
             // TiMakV1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(39, 55, 77);
             ClientSize = new Size(804, 451);
-            Controls.Add(button2);
             Controls.Add(openglControl1);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(listBox1);
             Controls.Add(textBox1);
@@ -119,7 +121,7 @@
         private TextBox textBox1;
         private ListBox listBox1;
         private Button button1;
-        private SharpGL.OpenGLControl openglControl1;
         private Button button2;
+        private SharpGL.OpenGLControl openglControl1;
     }
 }
